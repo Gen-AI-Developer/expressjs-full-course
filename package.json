@@ -1,0 +1,30 @@
+{
+  "name": "expressjs-full-course",
+  "version": "1.0.0",
+  "description": "Express JS Backend Course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gen-AI-Developer/expressjs-full-course.git"
+  },
+  "keywords": [
+    "Express",
+    "Js",
+    "Node",
+    "Js",
+    "Backend",
+    "Development"
+  ],
+  "author": "Syed Safdar Ali Shah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Gen-AI-Developer/expressjs-full-course/issues"
+  },
+  "homepage": "https://github.com/Gen-AI-Developer/expressjs-full-course#readme",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
