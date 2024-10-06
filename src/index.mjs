@@ -48,8 +48,26 @@ app.get("/", (request, response) => {
 app.get("/users", (request, response) => {
   response.status(200).send(mockUsersData);
 });
-//single user route parametter record
+
+//single user API Endpoint
 app.get("/users/:id", (request, response) => {
-  console.log(request.params);
-  response.status(200).send();
+  // console.log(request.params);
+  const Userid = parseInt(request.params.id); // Convert string to INT
+  if (isNaN(Userid)) {
+    // checking if it is not NaN
+    return response.status(400).send({
+      message: "Bad Request. Invalid ID",
+    });
+  }
+  // Find User with help of ID in Object (latter DB)
+  const findUser = mockUsersData.find((user) => user.id === Userid);
+  if (!findUser) {
+    //if no user found in object
+    // return response.status(404).send({ message: "User Not Found." });
+    return response.sendStatus(404);
+  }
+  if (findUser) {
+    // if user found it send positive response.
+    return response.status(200).send(findUser);
+  }
 });
