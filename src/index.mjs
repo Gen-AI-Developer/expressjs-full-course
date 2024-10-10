@@ -75,3 +75,7 @@ app.get("/users/:id", (request, response) => {
     return response.status(200).send(findUser);
   }
 });
+//localhost:3000/users
+//localhost:3000/users/1
+//localhost:3000/product/
+//localhost:3000/product?key=value&key2=value2
