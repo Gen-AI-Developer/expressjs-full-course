@@ -45,9 +45,13 @@ app.get("/", (request, response) => {
   });
 });
 //Show Users Route all users record
-app.get("/users", (request, response) => {
-  response.status(200).send(mockUsersData);
-});
+app.get(
+  "/users",
+
+  (request, response) => {
+    response.status(200).send(mockUsersData);
+  }
+);
 
 //single user API Endpoint
 app.get("/users/:id", (request, response) => {
